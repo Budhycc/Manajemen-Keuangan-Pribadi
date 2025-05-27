@@ -1,5 +1,3 @@
-Berikut adalah README yang telah **diperbarui** dengan penjelasan tambahan mengenai penggunaan script `.bat` (Windows) dan `.sh` (Linux/macOS):
-
 ---
 
 # 📘 README - Manajemen Keuangan Pribadi
