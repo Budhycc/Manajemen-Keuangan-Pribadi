@@ -1,5 +1,3 @@
----
-
 # 📘 Manajemen Keuangan Pribadi
 
 Aplikasi ini adalah program desktop sederhana berbasis **Java Swing** untuk mencatat dan memantau pemasukan serta pengeluaran keuangan pribadi. Aplikasi ini dapat dijalankan di **Windows** maupun **Linux** karena dibangun menggunakan Java.
@@ -60,9 +58,9 @@ java -jar ManajemenKeuanganPribadi.jar
 
 ## 🖱️ 4. Menjalankan dengan Skrip Otomatis
 
-### 🔹 Windows: `runManajemenKeuangan.bat`
+### 🔹 Windows: `jalankan.bat`
 
-Buat file bernama `runManajemenKeuangan.bat` dengan isi berikut:
+Buat file bernama `jalankan.bat` dengan isi berikut:
 
 ```bat
 @echo off
@@ -74,9 +72,9 @@ Jalankan file ini cukup dengan klik dua kali pada Windows Explorer.
 
 ---
 
-### 🔹 Linux/macOS: `runManajemenKeuangan.sh`
+### 🔹 Linux/macOS: `jalankan.sh`
 
-Buat file bernama `runManajemenKeuangan.sh` dengan isi berikut:
+Buat file bernama `jalankan.sh` dengan isi berikut:
 
 ```bash
 #!/bin/bash
@@ -87,13 +85,13 @@ read -p "Tekan Enter untuk keluar..."
 Lalu beri izin eksekusi dengan perintah:
 
 ```bash
-chmod +x runManajemenKeuangan.sh
+chmod +x jalankan.sh
 ```
 
 Dan jalankan dengan:
 
 ```bash
-./runManajemenKeuangan.sh
+./jalankan.sh
 ```
 
 ---
