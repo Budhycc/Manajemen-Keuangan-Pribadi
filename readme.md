@@ -1,6 +1,6 @@
 ---
 
-# 📘 README - Manajemen Keuangan Pribadi
+# 📘 Manajemen Keuangan Pribadi
 
 Aplikasi ini adalah program desktop sederhana berbasis **Java Swing** untuk mencatat dan memantau pemasukan serta pengeluaran keuangan pribadi. Aplikasi ini dapat dijalankan di **Windows** maupun **Linux** karena dibangun menggunakan Java.
 
