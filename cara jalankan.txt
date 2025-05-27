@@ -1,0 +1,3 @@
+di windows bisa buka dengan file  { jalankan.bat }
+atau dengan terminal, dengan perintah { java -jar ManajemenKeuanganPribadi.jar }
+dan terinstall JDK

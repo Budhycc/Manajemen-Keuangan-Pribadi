@@ -49,26 +49,3 @@ java -jar ManajemenKeuanganPribadi.jar
 ```
 
 ---
-
-## 4. Jalankan di Windows & Linux
-
-Syaratnya:
-
-* **Java Runtime Environment (JRE)** sudah terinstall di komputer target (Windows/Linux).
-* File JAR dan data `data_keuangan.dat` berada di folder yang sama (atau bisa buat konfigurasi khusus).
-
----
-
-## 5. Membuat Executable Native (Opsional)
-
-Jika Anda ingin bikin executable native `.exe` di Windows atau binary Linux yang tidak perlu install JRE terpisah, Anda bisa gunakan tools seperti:
-
-* **jpackage** (bundled di JDK 14+)
-* **Launch4j** (Windows .exe wrapper)
-* **GraalVM Native Image** (native compilation, advanced)
-
-Kalau Anda mau saya bantu buatkan langkah pakai `jpackage`, saya bisa bantu juga.
-
----
-
-Kalau mau, saya bisa bantu buatkan skrip build otomatis untuk Windows/Linux juga. Apa Anda ingin?
