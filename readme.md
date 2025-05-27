@@ -1,51 +1,101 @@
-Untuk membangun (build) aplikasi Java Swing Anda agar bisa dijalankan di **Windows** dan **Linux**, pada dasarnya cukup dengan memastikan Anda sudah meng-compile file `.java` menjadi `.class` (bytecode Java), karena Java bersifat cross-platform.
+Berikut adalah README yang telah **diperbarui** dengan penjelasan tambahan mengenai penggunaan script `.bat` (Windows) dan `.sh` (Linux/macOS):
 
 ---
 
-## 1. Compile Program
+# 📘 README - Manajemen Keuangan Pribadi
 
-Jalankan perintah ini di terminal (Windows Command Prompt, PowerShell, atau Linux Terminal) pada folder yang berisi file `ManajemenKeuanganPribadi.java` dan `Transaksi.java`:
+Aplikasi ini adalah program desktop sederhana berbasis **Java Swing** untuk mencatat dan memantau pemasukan serta pengeluaran keuangan pribadi. Aplikasi ini dapat dijalankan di **Windows** maupun **Linux** karena dibangun menggunakan Java.
+
+---
+
+## ✅ 1. Compile Program
+
+Pastikan Anda sudah berada di direktori yang berisi file `ManajemenKeuanganPribadi.java` dan `Transaksi.java`, lalu jalankan:
 
 ```bash
 javac ManajemenKeuanganPribadi.java
 ```
 
-Ini akan menghasilkan file `.class`.
+Perintah ini akan mengkompilasi program dan menghasilkan file `.class` (bytecode Java).
 
 ---
 
-## 2. Jalankan Program
+## ▶️ 2. Jalankan Program
 
-Untuk menjalankan di kedua platform:
+Setelah dikompilasi, Anda bisa langsung menjalankan aplikasi dengan perintah:
 
 ```bash
 java ManajemenKeuanganPribadi
 ```
 
+Program akan menampilkan antarmuka pengguna berbasis Java Swing.
+
 ---
 
-## 3. Membuat File JAR (Optional)
+## 📦 3. Membuat File JAR (Opsional)
 
-Agar mudah distribusikan, Anda bisa buat file JAR (Java Archive) yang berisi aplikasi lengkap:
+Untuk distribusi yang lebih mudah, Anda dapat menggabungkan file `.class` ke dalam satu file `.jar`.
 
-1. Buat file `manifest.txt` dengan isi berikut, untuk menetapkan kelas utama (main class):
+### Langkah-langkah:
+
+#### a. Buat file `manifest.txt` dengan isi:
 
 ```
 Main-Class: ManajemenKeuanganPribadi
 ```
 
-Pastikan ada baris kosong di akhir file `manifest.txt`.
+> **Catatan:** Pastikan ada satu baris kosong di akhir file `manifest.txt`.
 
-2. Jalankan perintah untuk buat JAR:
+#### b. Buat file JAR menggunakan perintah:
 
 ```bash
 jar cfm ManajemenKeuanganPribadi.jar manifest.txt *.class
 ```
 
-3. Jalankan file JAR:
+#### c. Jalankan file JAR:
 
 ```bash
 java -jar ManajemenKeuanganPribadi.jar
+```
+
+---
+
+## 🖱️ 4. Menjalankan dengan Skrip Otomatis
+
+### 🔹 Windows: `runManajemenKeuangan.bat`
+
+Buat file bernama `runManajemenKeuangan.bat` dengan isi berikut:
+
+```bat
+@echo off
+java -jar ManajemenKeuanganPribadi.jar
+pause
+```
+
+Jalankan file ini cukup dengan klik dua kali pada Windows Explorer.
+
+---
+
+### 🔹 Linux/macOS: `runManajemenKeuangan.sh`
+
+Buat file bernama `runManajemenKeuangan.sh` dengan isi berikut:
+
+```bash
+#!/bin/bash
+java -jar ManajemenKeuanganPribadi.jar
+read -p "Tekan Enter untuk keluar..."
+```
+
+Lalu beri izin eksekusi dengan perintah:
+
+```bash
+chmod +x runManajemenKeuangan.sh
+```
+
+Dan jalankan dengan:
+
+```bash
+./runManajemenKeuangan.sh
 ```
 
 ---
