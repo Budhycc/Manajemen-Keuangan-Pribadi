@@ -1,7 +1,6 @@
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
-// import java.awt.event.*;
 import java.io.*;
 import java.time.LocalDate;
 import java.time.format.TextStyle;
@@ -34,6 +33,7 @@ public class ManajemenKeuanganPribadi extends JFrame {
         tfJumlah = new JTextField(7);
         cbTipe = new JComboBox<>(new String[]{"Pemasukan", "Pengeluaran"});
         JButton btnTambah = new JButton("Tambah");
+        JButton btnHapus = new JButton("Hapus"); // Tombol hapus
 
         inputPanel.add(new JLabel("Keterangan:"));
         inputPanel.add(tfKeterangan);
@@ -41,6 +41,7 @@ public class ManajemenKeuanganPribadi extends JFrame {
         inputPanel.add(tfJumlah);
         inputPanel.add(cbTipe);
         inputPanel.add(btnTambah);
+        inputPanel.add(btnHapus); // Tambahkan tombol hapus ke panel
 
         add(inputPanel, BorderLayout.NORTH);
 
@@ -60,6 +61,7 @@ public class ManajemenKeuanganPribadi extends JFrame {
 
         // Listener
         btnTambah.addActionListener(e -> tambahTransaksi());
+        btnHapus.addActionListener(e -> hapusTransaksi()); // Tambahkan aksi hapus
         btnLihatGrafik.addActionListener(e -> tampilkanGrafik());
     }
 
@@ -79,6 +81,20 @@ public class ManajemenKeuanganPribadi extends JFrame {
             saveData();
         } catch (NumberFormatException ex) {
             JOptionPane.showMessageDialog(this, "Jumlah harus berupa angka.", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }
+
+    private void hapusTransaksi() {
+        int selectedRow = table.getSelectedRow();
+        if (selectedRow >= 0) {
+            int confirm = JOptionPane.showConfirmDialog(this, "Apakah Anda yakin ingin menghapus transaksi ini?", "Konfirmasi Hapus", JOptionPane.YES_NO_OPTION);
+            if (confirm == JOptionPane.YES_OPTION) {
+                transaksiList.remove(selectedRow); // Hapus dari list
+                tableModel.removeRow(selectedRow);  // Hapus dari tabel
+                saveData();
+            }
+        } else {
+            JOptionPane.showMessageDialog(this, "Pilih transaksi yang ingin dihapus.", "Tidak Ada Yang Dipilih", JOptionPane.WARNING_MESSAGE);
         }
     }
 
